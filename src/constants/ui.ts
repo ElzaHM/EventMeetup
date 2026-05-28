@@ -1,8 +1,4 @@
 export const UI = {
-  container: {
-    maxWidth: 'max-w-7xl',
-    padding: 'px-4 sm:px-6 lg:px-8',
-  },
   navbar: {
     height: 'h-16',
   },

@@ -55,19 +55,17 @@ function Home() {
   ] as const
 
   return (
-    <div className="bg-[var(--background)]">
+    <div className="w-full min-w-0 bg-[var(--background)]">
       <Container>
         {/* Hero */}
-        <section className="grid items-center gap-12 py-12 lg:grid-cols-2 lg:gap-16 lg:py-20">
-          <div>
-            <span
-              className={`inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3 py-1.5 text-xs font-medium text-[var(--primary)]`}
-            >
-              <Sparkles size={14} />
+        <section className="grid w-full min-w-0 grid-cols-1 items-center gap-8 py-8 lg:grid-cols-2 lg:gap-10 lg:py-12">
+          <div className="min-w-0">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-[var(--primary)]">
+              <Sparkles size={12} />
               {t('home.hero.badge')}
             </span>
 
-            <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-[var(--text)] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 text-3xl font-bold leading-[1.15] tracking-tight text-[var(--text)] sm:text-4xl lg:text-[2.75rem] lg:leading-[1.12]">
               {t('home.hero.headingPrefix')}
               <span className="bg-gradient-to-r from-[var(--gradient-from)] to-[var(--primary)] bg-clip-text text-transparent">
                 {t('home.hero.headingHighlight')}
@@ -75,40 +73,36 @@ function Home() {
               {t('home.hero.headingSuffix')}
             </h1>
 
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-[var(--muted)] sm:text-lg">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-[var(--muted)] sm:text-base">
               {t('home.hero.subtitle')}
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Button
-                size="lg"
-                className="px-6"
-                onClick={() => navigate(ROUTES.EVENTS)}
-              >
+            <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:items-center">
+              <Button size="md" onClick={() => navigate(ROUTES.EVENTS)}>
                 {t('home.hero.exploreCta')}
-                <ArrowRight size={18} />
+                <ArrowRight size={16} />
               </Button>
               <Button
-                size="lg"
+                size="md"
                 variant="outline"
                 className="border-[var(--primary)] text-[var(--primary)]"
                 onClick={() => navigate(ROUTES.CREATE_EVENT)}
               >
                 {t('createEvent.title')}
-                <Calendar size={18} />
+                <Calendar size={16} />
               </Button>
             </div>
 
-            <div className="mt-8 flex items-center gap-3">
-              <div className="flex -space-x-2">
+            <div className="mt-5 flex min-w-0 items-center gap-2.5">
+              <div className="flex shrink-0 -space-x-2">
                 {SOCIAL_AVATARS.map((color, index) => (
                   <span
                     key={color}
-                    className={`h-9 w-9 rounded-full border-2 border-[var(--surface)] ${color} ${['z-40', 'z-30', 'z-20', 'z-10'][index]}`}
+                    className={`h-7 w-7 rounded-full border-2 border-[var(--surface)] ${color} ${['z-40', 'z-30', 'z-20', 'z-10'][index]}`}
                   />
                 ))}
               </div>
-              <p className="text-sm text-[var(--muted)]">
+              <p className="min-w-0 flex-1 text-xs leading-snug text-[var(--muted)] sm:text-sm">
                 <Trans
                   i18nKey="home.hero.socialProof"
                   components={{
@@ -121,67 +115,67 @@ function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto h-[360px] w-full max-w-lg sm:h-[420px] lg:mx-0 lg:max-w-none">
+          <div className="relative mx-auto h-[260px] w-full min-w-0 max-w-md overflow-hidden sm:h-[280px] lg:mx-0 lg:h-[300px] lg:max-w-none">
             <div
               aria-hidden
-              className="absolute -right-4 top-8 h-40 w-40 rounded-full bg-indigo-100 opacity-60 blur-2xl"
+              className="absolute -right-2 top-4 h-24 w-24 rounded-full bg-indigo-100 opacity-50 blur-2xl"
             />
             <div
               aria-hidden
-              className="absolute bottom-8 left-0 grid grid-cols-6 gap-1 opacity-30"
+              className="absolute bottom-6 left-0 grid grid-cols-6 gap-0.5 opacity-25"
             >
-              {Array.from({ length: 24 }).map((_, i) => (
-                <span key={i} className="h-1 w-1 rounded-full bg-[var(--muted)]" />
+              {Array.from({ length: 18 }).map((_, i) => (
+                <span key={i} className="h-0.5 w-0.5 rounded-full bg-[var(--muted)]" />
               ))}
             </div>
 
             <div
-              className={`absolute left-1/2 top-1/2 w-[78%] -translate-x-1/2 -translate-y-1/2 overflow-hidden shadow-xl ${UI.borderRadius.lg}`}
+              className={`absolute left-1/2 top-1/2 w-[72%] max-w-[240px] -translate-x-1/2 -translate-y-1/2 overflow-hidden shadow-lg ${UI.borderRadius.lg}`}
             >
               <img
                 src={HERO_MAIN_IMAGE}
                 alt=""
-                className="aspect-[4/5] w-full object-cover"
+                className="aspect-[4/3] w-full object-cover"
               />
             </div>
 
             <div
-              className={`absolute right-0 top-6 flex w-[44%] items-center gap-2 border border-[var(--border)] bg-[var(--surface)] p-2 shadow-lg ${UI.borderRadius.lg}`}
+              className={`absolute right-0 top-2 flex w-[40%] max-w-[140px] items-center gap-1.5 border border-[var(--border)] bg-[var(--surface)] p-1.5 shadow-md ${UI.borderRadius.md}`}
             >
               <img
                 src={HERO_TECH_IMAGE}
                 alt=""
-                className="h-14 w-14 rounded-lg object-cover"
+                className="h-9 w-9 shrink-0 rounded-md object-cover"
               />
-              <div>
-                <p className="text-xs font-semibold text-[var(--text)]">
+              <div className="min-w-0">
+                <p className="truncate text-[10px] font-semibold text-[var(--text)]">
                   {t('home.hero.card.tech')}
                 </p>
-                <Code2 size={14} className="mt-1 text-[var(--primary)]" />
+                <Code2 size={12} className="mt-0.5 text-[var(--primary)]" />
               </div>
             </div>
 
             <div
-              className={`absolute bottom-16 left-0 flex w-[42%] items-center gap-2 border border-[var(--border)] bg-[var(--surface)] p-2 shadow-lg ${UI.borderRadius.lg}`}
+              className={`absolute bottom-12 left-0 flex w-[38%] max-w-[130px] items-center gap-1.5 border border-[var(--border)] bg-[var(--surface)] p-1.5 shadow-md ${UI.borderRadius.md}`}
             >
               <img
                 src={HERO_DESIGN_IMAGE}
                 alt=""
-                className="h-14 w-14 rounded-lg object-cover"
+                className="h-9 w-9 shrink-0 rounded-md object-cover"
               />
-              <div>
-                <p className="text-xs font-semibold text-[var(--text)]">
+              <div className="min-w-0">
+                <p className="truncate text-[10px] font-semibold text-[var(--text)]">
                   {t('home.hero.card.design')}
                 </p>
-                <Heart size={14} className="mt-1 text-pink-500" />
+                <Heart size={12} className="mt-0.5 text-pink-500" />
               </div>
             </div>
 
             <div
-              className={`absolute bottom-4 right-8 flex items-center gap-2 border border-[var(--border)] bg-[var(--surface)] px-3 py-2 shadow-md ${UI.borderRadius.md}`}
+              className={`absolute bottom-2 right-4 flex items-center gap-1.5 border border-[var(--border)] bg-[var(--surface)] px-2 py-1 shadow-sm ${UI.borderRadius.md}`}
             >
-              <Music size={14} className="text-[var(--primary)]" />
-              <p className="text-xs font-semibold text-[var(--text)]">
+              <Music size={12} className="text-[var(--primary)]" />
+              <p className="text-[10px] font-semibold text-[var(--text)]">
                 {t('home.hero.card.concert')}
               </p>
             </div>
@@ -189,9 +183,9 @@ function Home() {
         </section>
 
         {/* Featured events */}
-        <section className="py-12 lg:py-16">
-          <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="text-2xl font-bold text-[var(--text)] sm:text-3xl">
+        <section className="w-full min-w-0 py-8 lg:py-10">
+          <div className="mb-5 flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="text-xl font-bold tracking-tight text-[var(--text)] sm:text-2xl">
               {t('home.featured.title')}
             </h2>
             <Link
@@ -199,11 +193,11 @@ function Home() {
               className={`inline-flex items-center gap-1 text-sm font-medium text-[var(--primary)] hover:underline ${UI.transition.default}`}
             >
               {t('home.featured.viewAll')}
-              <ArrowRight size={16} />
+              <ArrowRight size={14} />
             </Link>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid w-full min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {mockEvents.map((event) => (
               <FeaturedEventCard
                 key={event.id}
@@ -222,9 +216,9 @@ function Home() {
         </section>
 
         {/* Categories */}
-        <section className="py-12 lg:py-16">
-          <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="text-2xl font-bold text-[var(--text)] sm:text-3xl">
+        <section className="w-full min-w-0 py-8 lg:py-10">
+          <div className="mb-5 flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="text-xl font-bold tracking-tight text-[var(--text)] sm:text-2xl">
               {t('home.categories.title')}
             </h2>
             <Link
@@ -232,11 +226,11 @@ function Home() {
               className={`inline-flex items-center gap-1 text-sm font-medium text-[var(--primary)] hover:underline ${UI.transition.default}`}
             >
               {t('home.categories.viewAll')}
-              <ArrowRight size={16} />
+              <ArrowRight size={14} />
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
+          <div className="grid w-full min-w-0 grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8">
             {categories.map(({ icon, labelKey }) => (
               <CategoryCard key={labelKey} icon={icon} label={t(labelKey)} />
             ))}
@@ -244,31 +238,31 @@ function Home() {
         </section>
 
         {/* CTA banner */}
-        <section className="pb-12 lg:pb-20">
+        <section className="w-full min-w-0 pb-8 lg:pb-12">
           <div
-            className={`flex flex-col items-start justify-between gap-6 bg-gradient-to-r from-[var(--gradient-from)] to-[var(--gradient-to)] p-6 sm:flex-row sm:items-center sm:p-8 lg:p-10 ${UI.borderRadius.lg}`}
+            className={`flex w-full min-w-0 flex-col items-start justify-between gap-4 bg-gradient-to-r from-[var(--gradient-from)] to-[var(--gradient-to)] px-4 py-4 sm:flex-row sm:items-center sm:gap-6 sm:px-5 sm:py-4 ${UI.borderRadius.lg}`}
           >
-            <div className="flex items-start gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/20 text-white">
-                <Calendar size={24} />
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/20 text-white">
+                <Calendar size={18} />
               </span>
               <div>
-                <h3 className="text-xl font-bold text-white sm:text-2xl">
+                <h3 className="text-base font-bold text-white sm:text-lg">
                   {t('home.cta.title')}
                 </h3>
-                <p className="mt-2 max-w-xl text-sm text-white/90 sm:text-base">
+                <p className="mt-0.5 max-w-lg text-xs text-white/90 sm:text-sm">
                   {t('home.cta.subtitle')}
                 </p>
               </div>
             </div>
 
             <Button
-              size="lg"
-              className="shrink-0 bg-white text-[var(--primary)] hover:bg-white/90"
+              size="md"
+              className="w-full shrink-0 bg-white px-4 text-[var(--primary)] hover:bg-white/90 sm:w-auto"
               onClick={() => navigate(ROUTES.CREATE_EVENT)}
             >
               {t('home.cta.button')}
-              <ArrowRight size={18} />
+              <ArrowRight size={16} />
             </Button>
           </div>
         </section>

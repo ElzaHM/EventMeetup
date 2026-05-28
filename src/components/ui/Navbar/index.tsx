@@ -51,7 +51,7 @@ function Navbar() {
   )
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--surface)]">
+    <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--surface)]">
       <Container className={`flex ${UI.navbar.height} items-center justify-between gap-4`}>
         <div className="flex min-w-0 items-center gap-6">
           <Link to={ROUTES.HOME} className="flex shrink-0 items-center gap-2">

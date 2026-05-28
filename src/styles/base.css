@@ -4,9 +4,16 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  overflow-x: clip;
+}
+
 body {
+  width: 100%;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: clip;
   background: var(--background);
   color: var(--text);
   font-family: Inter, system-ui, sans-serif;
@@ -15,7 +22,9 @@ body {
 }
 
 #root {
+  width: 100%;
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 a {

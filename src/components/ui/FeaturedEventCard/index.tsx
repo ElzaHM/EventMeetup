@@ -39,50 +39,50 @@ function FeaturedEventCard({ event }: FeaturedEventCardProps) {
 
   return (
     <article
-      className={`overflow-hidden border border-[var(--border)] bg-[var(--surface)] shadow-sm ${UI.borderRadius.lg}`}
+      className={`min-w-0 overflow-hidden border border-[var(--border)] bg-[var(--surface)] shadow-sm ${UI.borderRadius.lg}`}
     >
-      <div className="relative aspect-[16/10]">
+      <div className="relative aspect-[16/9]">
         <img
           src={event.imageUrl}
           alt=""
           className="h-full w-full object-cover"
         />
         <span
-          className={`absolute bottom-3 left-3 px-2.5 py-1 text-xs font-medium ${UI.borderRadius.md} ${badgeClass}`}
+          className={`absolute bottom-2 left-2 px-2 py-0.5 text-[10px] font-medium ${UI.borderRadius.md} ${badgeClass}`}
         >
           {event.category}
         </span>
       </div>
 
-      <div className="space-y-3 p-4">
-        <h3 className="line-clamp-2 text-base font-semibold leading-snug text-[var(--text)]">
+      <div className="space-y-2 p-3">
+        <h3 className="line-clamp-2 text-sm font-semibold leading-snug text-[var(--text)]">
           {event.title}
         </h3>
 
-        <div className="space-y-1.5 text-sm text-[var(--muted)]">
-          <p className="flex items-center gap-2">
-            <Clock size={14} className="shrink-0" />
-            <span>{formatEventDate(event.date)}</span>
+        <div className="space-y-1 text-xs text-[var(--muted)]">
+          <p className="flex items-center gap-1.5">
+            <Clock size={12} className="shrink-0" />
+            <span className="line-clamp-1">{formatEventDate(event.date)}</span>
           </p>
-          <p className="flex items-center gap-2">
-            <MapPin size={14} className="shrink-0" />
+          <p className="flex items-center gap-1.5">
+            <MapPin size={12} className="shrink-0" />
             <span className="line-clamp-1">{event.location}</span>
           </p>
         </div>
 
-        <div className="flex items-center justify-between pt-1">
+        <div className="flex items-center justify-between pt-0.5">
           <div className="flex items-center">
-            <div className="flex -space-x-2">
+            <div className="flex -space-x-1.5">
               {['A', 'B', 'C', 'D'].map((initial, index) => (
                 <span
                   key={initial}
-                  className={`flex h-7 w-7 items-center justify-center rounded-full border-2 border-[var(--surface)] bg-[var(--primary)] text-[10px] font-medium text-white ${['z-40', 'z-30', 'z-20', 'z-10'][index]}`}
+                  className={`flex h-6 w-6 items-center justify-center rounded-full border-2 border-[var(--surface)] bg-[var(--primary)] text-[9px] font-medium text-white ${['z-40', 'z-30', 'z-20', 'z-10'][index]}`}
                 >
                   {initial}
                 </span>
               ))}
             </div>
-            <span className="ml-2 text-xs font-medium text-[var(--muted)]">
+            <span className="ml-1.5 text-[10px] font-medium text-[var(--muted)]">
               +{event.attendeeCount}
             </span>
           </div>
@@ -90,9 +90,9 @@ function FeaturedEventCard({ event }: FeaturedEventCardProps) {
           <button
             type="button"
             aria-label="Bookmark event"
-            className={`flex h-9 w-9 items-center justify-center rounded-lg text-[var(--muted)] hover:bg-[var(--background)] hover:text-[var(--text)] ${UI.transition.default}`}
+            className={`flex h-7 w-7 items-center justify-center rounded-md text-[var(--muted)] hover:bg-[var(--background)] hover:text-[var(--text)] ${UI.transition.default}`}
           >
-            <Bookmark size={18} />
+            <Bookmark size={14} />
           </button>
         </div>
       </div>

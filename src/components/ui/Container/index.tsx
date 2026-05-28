@@ -1,7 +1,5 @@
 import type { HTMLAttributes, ReactNode } from 'react'
 
-import { UI } from '@/constants/ui'
-
 interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
 }
@@ -9,7 +7,7 @@ interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 function Container({ children, className = '', ...props }: ContainerProps) {
   return (
     <div
-      className={`mx-auto w-full ${UI.container.maxWidth} ${UI.container.padding} ${className}`}
+    className={`mx-auto w-full min-w-0 max-w-7xl px-6 sm:px-8 lg:px-10 xl:px-12 2xl:max-w-screen-2xl ${className}`}
       {...props}
     >
       {children}
