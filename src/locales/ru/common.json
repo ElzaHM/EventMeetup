@@ -1,0 +1,8 @@
+{
+  "navbar.brand": "MeetFlow",
+  "navbar.events": "События",
+  "navbar.login": "Вход",
+  "navbar.register": "Регистрация",
+  "home.title": "Откройте для себя местные события",
+  "createEvent.title": "Создать событие"
+}
