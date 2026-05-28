@@ -1,3 +1,23 @@
 @import 'tailwindcss';
 @import './styles/tokens.css';
 @import './styles/base.css';
+
+/* Tailwind layers */
+@layer base, antd, utilities;
+
+@layer utilities {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: Inter, sans-serif;
+}
