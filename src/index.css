@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
+<<<<<<< Updated upstream
 /* Սա կօգնի, որ Tailwind-ի կլասները հաղթեն Ant Design-ին */
 @layer base, antd, utilities;
 
 @layer utilities {
   /* Tailwind-ի բոլոր utilities-ները կմտնեն այս շերտի մեջ */
 }
+=======
+
+>>>>>>> Stashed changes
 
 * {
   margin: 0;

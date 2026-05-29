@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+<<<<<<< Updated upstream
       '@tailwindcss/postcss':
         specifier: ^4.3.0
         version: 4.3.0
+=======
+      '@ant-design/icons':
+        specifier: ^6.2.5
+        version: 6.2.5(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+>>>>>>> Stashed changes
       '@tailwindcss/vite':
         specifier: ^4.3.0
         version: 4.3.0(vite@8.0.14(@types/node@24.12.4)(jiti@2.7.0))
@@ -116,8 +122,13 @@ packages:
   '@ant-design/icons-svg@4.4.2':
     resolution: {integrity: sha512-vHbT+zJEVzllwP+CM+ul7reTEfBR0vgxFe7+lREAsAA7YGsYpboiq2sQNeQeRvh09GfQgs/GyFEvZpJ9cLXpXA==}
 
+<<<<<<< Updated upstream
   '@ant-design/icons@6.2.3':
     resolution: {integrity: sha512-Pl3aoAtxQeKryYnt6VvDJtOxMOtA8wrRSACe/pTjOAIG3fdHrWm6Ivb4ku9tsFjYroSXBKirvuxG4QkwBXD9gg==}
+=======
+  '@ant-design/icons@6.2.5':
+    resolution: {integrity: sha512-0hKtoKqTjGFOndUyJLJmC9Cg6k4rEO7rLo6xmgbNJH+/ZX1C57RVals2v1j1knHl9n7Q+sBOveTvn931wLOCKw==}
+>>>>>>> Stashed changes
     engines: {node: '>=8'}
     peerDependencies:
       react: '>=16.0.0'
@@ -382,8 +393,13 @@ packages:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
 
+<<<<<<< Updated upstream
   '@rc-component/menu@1.3.0':
     resolution: {integrity: sha512-u3NfiwpiEgT177qa5Yxm5QsI8i/93EBGpWj8HYZQDnh2pCZ2xtQCe/+w3pSR2NlwKOZDTCKzEhEyD09mGphssA==}
+=======
+  '@rc-component/menu@1.3.1':
+    resolution: {integrity: sha512-pSZl9nBPgKgxN0aaW7NilIBEwWsc+43S+ulGdWAg9afak96dNOGWsGx0DLLBB1VQsAJvo6bQMTDzXoPlEHsBEw==}
+>>>>>>> Stashed changes
     peerDependencies:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
@@ -1419,6 +1435,9 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
+  react-is@18.3.1:
+    resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
+
   react-router-dom@7.15.1:
     resolution: {integrity: sha512-AzF62gjY6U9rkMq4RfP/r2EVtQ7DMfNMjyOp/flLTCrtRylLiK4wT4pSq6O8rOXZ2eXdZYJPEYe+ifomiv+Igg==}
     engines: {node: '>=20.0.0'}
@@ -1633,7 +1652,11 @@ snapshots:
 
   '@ant-design/icons-svg@4.4.2': {}
 
+<<<<<<< Updated upstream
   '@ant-design/icons@6.2.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+=======
+  '@ant-design/icons@6.2.5(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+>>>>>>> Stashed changes
     dependencies:
       '@ant-design/colors': 8.0.1
       '@ant-design/icons-svg': 4.4.2
@@ -1956,14 +1979,22 @@ snapshots:
   '@rc-component/mentions@1.9.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@rc-component/input': 1.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+<<<<<<< Updated upstream
       '@rc-component/menu': 1.3.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+=======
+      '@rc-component/menu': 1.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+>>>>>>> Stashed changes
       '@rc-component/trigger': 3.9.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@rc-component/util': 1.11.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       clsx: 2.1.1
       react: 19.2.6
       react-dom: 19.2.6(react@19.2.6)
 
+<<<<<<< Updated upstream
   '@rc-component/menu@1.3.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+=======
+  '@rc-component/menu@1.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+>>>>>>> Stashed changes
     dependencies:
       '@rc-component/motion': 1.3.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@rc-component/overflow': 1.0.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -2112,7 +2143,11 @@ snapshots:
   '@rc-component/tabs@1.9.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@rc-component/dropdown': 1.0.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+<<<<<<< Updated upstream
       '@rc-component/menu': 1.3.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+=======
+      '@rc-component/menu': 1.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+>>>>>>> Stashed changes
       '@rc-component/motion': 1.3.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@rc-component/resize-observer': 1.1.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@rc-component/util': 1.11.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -2466,7 +2501,11 @@ snapshots:
       '@ant-design/cssinjs': 2.1.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@ant-design/cssinjs-utils': 2.1.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@ant-design/fast-color': 3.0.1
+<<<<<<< Updated upstream
       '@ant-design/icons': 6.2.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+=======
+      '@ant-design/icons': 6.2.5(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+>>>>>>> Stashed changes
       '@ant-design/react-slick': 2.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@babel/runtime': 7.29.7
       '@rc-component/cascader': 1.15.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -2481,7 +2520,11 @@ snapshots:
       '@rc-component/input': 1.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@rc-component/input-number': 1.6.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@rc-component/mentions': 1.9.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+<<<<<<< Updated upstream
       '@rc-component/menu': 1.3.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+=======
+      '@rc-component/menu': 1.3.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+>>>>>>> Stashed changes
       '@rc-component/motion': 1.3.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@rc-component/mutate-observer': 2.0.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@rc-component/notification': 2.0.7(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -2976,6 +3019,8 @@ snapshots:
   react-hook-form@7.76.1(react@19.2.6):
     dependencies:
       react: 19.2.6
+
+  react-is@18.3.1: {}
 
   react-is@18.3.1: {}
 
